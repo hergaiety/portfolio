@@ -22,16 +22,16 @@ Metalsmith(__dirname)
   .use(layouts({
     engine: 'handlebars'
   }))
-  .use(serve())
   .use(
     watch({
       paths: {
-        "src/**/*": true,
-        "layouts/**/*": true
+        "src/**/*": "**/*",
+        "layouts/**/*": "**/*"
       },
       livereload: true,
     })
   )
+  .use(serve())
   .build(function(err, files) {
     if (err) { throw err; }
   });
