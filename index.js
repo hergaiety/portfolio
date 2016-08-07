@@ -2,6 +2,7 @@ var Metalsmith  = require('metalsmith');
 var markdown    = require('metalsmith-markdown');
 var sass        = require('metalsmith-sass');
 var layouts     = require('metalsmith-layouts');
+var assets      = require('metalsmith-assets');
 var permalinks  = require('metalsmith-permalinks');
 var serve       = require('metalsmith-serve');
 var watch       = require('metalsmith-watch');
@@ -17,15 +18,21 @@ Metalsmith(__dirname)
   .destination('./build')
   .clean(false)
   .use(markdown())
+  .use(assets({
+    source: './src/assets',
+    destination: './src/assets'
+  }))
   .use(permalinks())
   .use(sass())
   .use(layouts({
-    engine: 'handlebars'
+    engine: 'handlebars',
+    partials: 'partials'
   }))
   .use(
     watch({
       paths: {
         "src/**/*": "**/*",
+        "partials/**/*": "**/*",
         "layouts/**/*": "**/*"
       },
       livereload: true,
