@@ -1,3 +1,8 @@
+$success: #28C665;
+$primary: #87D2C8;
+$secondary: #A01C69;
+$max-width: 60rem;
+
 html {
   margin: 0;
 }
@@ -6,13 +11,58 @@ body {
   margin: 0;
   background: #F2F2F2;
   > header {
-    padding: 2rem;
+    padding: 2rem 0;
     background: #282A36;
     color: white;
+    box-shadow: 0 .25rem 1rem .25rem rgba(0, 0, 0, 0.25);
     a {
-      color: #87D2C8;
+      color: $primary;
+      text-decoration: underline;
+      &:focus,
+      &:hover,
+      &:focus span,
+      &:hover span {
+        outline: none;
+        color: white;
+      }
+    }
+    a .secondary {
+      color: $secondary;
+    }
+    a .normal {
+      color: white;
+    }
+    .dim {
+      color: #ccc;
     }
   }
+}
+
+.wrapper {
+  padding: 0 2rem;
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+a {
+  color: $secondary;
+  text-decoration: none;
+  &:focus,
+  &:hover {
+    outline: none;
+    color: lighten($secondary, 10%);
+  }
+  &:active {
+    background: black;
+    color: white;
+  }
+}
+
+img,
+video {
+  max-width: $max-width * .75;
+  width: 100%;
+  border-radius: .25rem;
 }
 
 .text-code {
@@ -20,5 +70,26 @@ body {
 }
 
 .text-success {
-  color: #28C665;
+  color: $success;
+}
+
+#content {
+  p {
+    width: 50%;
+    clear: both;
+
+    &:nth-of-type(odd) {
+      float: left;
+    }
+
+    &:nth-of-type(odd) {
+      float: right;
+    }
+  }
+
+  img,
+  video {
+    margin: 0 auto;
+    display: block;
+  }
 }
