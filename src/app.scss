@@ -1,7 +1,23 @@
 $success: #28C665;
 $primary: #87D2C8;
-$secondary: #A01C69;
+$secondary: #FF0093;
+$secondary-dark: darken($secondary, 10%);
+$dark: #282A36;
+$light: #6A7380;
+$lightest: #B2BDCD;
 $max-width: 60rem;
+$spacing-md: 2rem;
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-$spacing-md);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
 html {
   margin: 0;
@@ -9,48 +25,66 @@ html {
 
 body {
   margin: 0;
-  background: #F2F2F2;
-  > header {
-    padding: 2rem 0;
-    background: #282A36;
-    color: white;
-    box-shadow: 0 .25rem 1rem .25rem rgba(0, 0, 0, 0.25);
-    a {
-      color: $primary;
-      text-decoration: underline;
-      &:focus,
-      &:hover,
-      &:focus span,
-      &:hover span {
-        outline: none;
-        color: white;
-      }
-    }
-    a .secondary {
-      color: $secondary;
-    }
-    a .normal {
-      color: white;
-    }
-    .dim {
-      color: #ccc;
-    }
-  }
+  color: $dark;
+  background: #F2F2F2 url(../../assets/site/bg.png);
+  font-family: Rokkitt, serif;
+  font-size: 20px;
 }
 
 .wrapper {
-  padding: 0 2rem;
+  padding: 0 $spacing-md;
   max-width: $max-width;
   margin: 0 auto;
 }
 
-a {
-  color: $secondary;
+h1, h2, h3, h4 {
+  font-family: 'Poiret One', sans-serif;
+}
+
+h1 {
+  font-size: 3em;
+  margin: $spacing-md 0;
+}
+
+body > header {
+  font-size: .75em;
+  padding: 2rem 0;
+  background: $dark;
+  color: white;
+  box-shadow: 0 .25rem 1rem .25rem rgba(0, 0, 0, .25);
+  a {
+    color: $primary;
+    text-decoration: underline;
+    &:focus,
+    &:hover,
+    &:focus span,
+    &:hover span {
+      outline: none;
+      color: white;
+    }
+  }
+  a .secondary {
+    color: $secondary;
+    text-decoration: underline;
+  }
+  a .normal {
+    color: white;
+    text-decoration: underline;
+  }
+  .dim {
+    color: #ccc;
+  }
+}
+
+body > main a {
+  color: $secondary-dark;
   text-decoration: none;
+  border-radius: 3px;
+
   &:focus,
   &:hover {
     outline: none;
-    color: lighten($secondary, 10%);
+    color: $secondary;
   }
   &:active {
     background: black;
@@ -74,9 +108,12 @@ video {
 }
 
 #content {
+  animation: fadeInRight 500ms ease-out;
+
   p {
     width: 50%;
     clear: both;
+    margin-bottom: 1em;
 
     &:nth-of-type(odd) {
       float: left;
@@ -89,7 +126,113 @@ video {
 
   img,
   video {
-    margin: 0 auto;
+    margin: 1em auto;
     display: block;
   }
+}
+
+#home > * {
+  padding-top: 0;
+}
+
+.posts {
+  list-style-type: none;
+  padding: 0;
+
+  figure {
+    border-radius: 3px;
+    overflow: hidden;
+    background: white;
+    float: left;
+    cursor: pointer;
+    transition: box-shadow 100ms, transform 100ms;
+    box-shadow: 0 .25rem 1rem .25rem rgba(0, 0, 0, .075);
+
+    &:hover,
+    &:focus {
+      transform: translateY(-.25rem) scale(1.05);
+      box-shadow: 0 .25rem 1.5rem .25rem rgba(0, 0, 0, .075);
+    }
+
+    &:active {
+      transform: translateY(.25rem) scale(.95);
+      box-shadow: 0 .25rem .5rem .25rem rgba(0, 0, 0, .1);
+    }
+
+    img {
+      object-fit: cover;
+      border-radius: 0;
+      opacity: .2;
+      display: block;
+    }
+
+    .preview {
+      position: relative;
+      display: inline-block;
+
+      h3 {
+        color: white;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin: .5em;
+      }
+
+      &::before {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: $dark;
+      }
+    }
+
+    figcaption {
+      font-size: .9em;
+      color: $light;
+      display: inline-block;
+
+      footer {
+        margin-top: 1em;
+        color: $lightest;
+      }
+
+      .secondary {
+        float: right;
+        color: $secondary-dark;
+      }
+    }
+  }
+}
+
+[data-type=bundle] {
+  width: 100%;
+
+  figure {
+    width: 100%;
+
+    .preview {
+      float: left;
+    }
+
+    .preview img {
+      height: 2.5em;
+    }
+  }
+
+  figcaption {
+    float: right;
+    padding-right: .5em;
+  }
+}
+
+[data-type=article] .preview img {
+  width: 100%;
+  height: 9rem;
+}
+
+[data-type=article] figcaption {
+  padding: .5em;
 }

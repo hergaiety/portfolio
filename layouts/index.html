@@ -1,5 +1,32 @@
 {{> header }}
 
-{{{ contents }}}
+<header class="frame" id="home">
+  <div class="bit-60">
+    {{{ contents }}}
+  </div>
+
+  <img id="face" class="bit-40" src="../../assets/site/face.png" alt="" />
+</header>
+
+<ul class="posts frame">
+  {{#each collections.posts as |post|}}
+    <li data-type="{{ post.type }}" class="bit-3">
+      <figure onclick="window.location = '{{ post.path }}'">
+        <div class="preview">
+          <h3>{{ post.title }}</h3>
+          <img src="../../assets/media/{{ post.preview }}" alt="" />
+        </div>
+        <figcaption>
+          {{ post.description }}
+          <footer>
+            {{ post.client }}
+            <span class="secondary">
+              Continue...
+            </span>
+          </footer>
+        </figcaption>
+      </figure>
+  {{/each}}
+</ul>
 
 {{> footer }}

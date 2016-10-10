@@ -2,7 +2,7 @@ var Metalsmith  = require('metalsmith');
 var markdown    = require('metalsmith-markdown');
 var sass        = require('metalsmith-sass');
 var layouts     = require('metalsmith-layouts');
-var assets      = require('metalsmith-assets');
+var collections = require('metalsmith-collections');
 var permalinks  = require('metalsmith-permalinks');
 var serve       = require('metalsmith-serve');
 var watch       = require('metalsmith-watch');
@@ -18,9 +18,11 @@ Metalsmith(__dirname)
   .destination('./build')
   .clean(false)
   .use(markdown())
-  .use(assets({
-    source: './src/assets',
-    destination: './src/assets'
+  .use(collections({
+    posts: {
+      pattern: 'posts/*',
+      sortBy: 'order'
+    }
   }))
   .use(permalinks())
   .use(sass())

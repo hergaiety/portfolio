@@ -1,18 +1,12 @@
 ---
-title: Patient Education
+title: Animated Awards
 type: article
-order: 301
-preview: patient_education/preview.gif
-description: Creating a "Street View" for anatomy and "Youtube" for doctors.
-client: Rendia
+order: 302
+preview: navigating_employee_benefits/preview.jpg
+description: Putting some pep into company values through animation.
+client: Laureate University
 layout: post.html
 ---
-
-<video autoplay loop>
-  <source src="../../assets/media/patient_education/teaser.mp4" type="video/mp4">
-  <source src="../../assets/media/patient_education/teaser.webm" type="video/webm">
-  <source src="../../assets/media/patient_education/teaser.ogv" type="video/ogg">
-</video>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan varius dui. Vestibulum ut porttitor nulla.
 
