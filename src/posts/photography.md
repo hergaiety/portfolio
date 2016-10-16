@@ -1,5 +1,5 @@
 ---
-title: Photography
+title: Photos
 type: bundle
 order: 400
 preview: photography/preview.jpg

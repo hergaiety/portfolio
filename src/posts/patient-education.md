@@ -22,7 +22,7 @@ Formerly known as **Eyemaginations**, the company **Rendia** offers high quality
 
 Doctors can build playlists of content, upload their own images/videos, and then share their creations with patients via email and by embedding them directly on their practice website. Or they can play this content right in their practice while taking advantage of onscreen drawing features with a mouse or touch device. The media player offers content protection, and patients may choose between multiple languages, closed captions, fullscreen, and more.
 
-<var data-presentation="5276fa67-49cb-48f8-40da-45b94cd34364"></var>
-<script type="text/javascript" src="//rendia.com/whitelabel/embed_js"></script>
-
 ###### CODEIGNITER, CSS3, EMBER.JS, FOUNDATION, GIT, HTML5, ICON FONTS, JAVASCRIPT, JQUERY, PHP, SASS, VIDEO
+
+<var data-presentation="5276fa67-49cb-48f8-40da-45b94cd34364" style="width:100%; padding-bottom:56.25%; display:block;"></var>
+<script type="text/javascript" src="//rendia.com/whitelabel/embed_js"></script>

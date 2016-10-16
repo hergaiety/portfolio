@@ -7,6 +7,8 @@ $light: #6A7380;
 $lightest: #B2BDCD;
 $max-width: 60rem;
 $spacing-md: 2rem;
+$qry-s: 480px;
+$qry-m: 700px;
 
 @keyframes fadeInRight {
   from {
@@ -31,7 +33,7 @@ body {
   font-size: 20px;
 }
 
-.wrapper {
+.container {
   padding: 0 $spacing-md;
   max-width: $max-width;
   margin: 0 auto;
@@ -46,8 +48,22 @@ h1 {
   margin: $spacing-md 0;
 }
 
+h1 + h2 {
+  margin-top: -1em;
+}
+
+@media (max-width: $qry-m) {
+  #face {
+    display: none;
+  }
+
+  h1 {
+    font-size: 2.5em;
+  }
+}
+
 body > header {
-  font-size: .75em;
+  font-size: .7em;
   padding: 2rem 0;
   background: $dark;
   color: white;
@@ -111,16 +127,27 @@ video {
   animation: fadeInRight 500ms ease-out;
 
   p {
-    width: 50%;
-    clear: both;
     margin-bottom: 1em;
+  }
 
-    &:nth-of-type(odd) {
-      float: left;
+  @media (min-width: $qry-s) {
+    p {
+      width: 50%;
+      clear: both;
+
+      &:nth-of-type(odd) {
+        float: left;
+      }
+
+      &:nth-of-type(odd) {
+        float: right;
+      }
     }
+  }
 
-    &:nth-of-type(odd) {
-      float: right;
+  @media (min-width: $qry-s) and (max-width: $qry-m) {
+    p {
+      width: 75%;
     }
   }
 
@@ -145,6 +172,7 @@ video {
   padding: 0;
 
   figure {
+    margin: 0 0 $spacing-md 0;
     border-radius: 3px;
     overflow: hidden;
     background: white;
@@ -212,8 +240,14 @@ video {
   }
 }
 
+[data-type] figcaption {
+  padding: .5em;
+}
+
 [data-type=bundle] {
-  width: 100%;
+  @media (min-width: $qry-s) {
+    width: 98.5%;
+  }
 
   figure {
     width: 100%;
@@ -229,15 +263,11 @@ video {
 
   figcaption {
     float: right;
-    padding-right: .5em;
+    padding-top: 0;
   }
 }
 
 [data-type=article] .preview img {
   width: 100%;
   height: 9rem;
-}
-
-[data-type=article] figcaption {
-  padding: .5em;
 }

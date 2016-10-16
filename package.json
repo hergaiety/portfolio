@@ -3,16 +3,16 @@
   "private": true,
   "scripts": {
     "build": "npm run vendor && make build",
-    "vendor": "mkdir -p build && cp ./node_modules/lemonade-grid/css/lemonade.min.css ./build",
+    "vendor": "mkdir -p build && cp ./node_modules/toast-grid/css/grid.css ./build",
     "deploy": "aws s3 sync . s3://www.joewroten.com"
   },
   "dependencies": {
     "handlebars": "^4.0.5",
-    "lemonade-grid": "^2.1.0",
     "metalsmith": "^2.1.0",
     "metalsmith-layouts": "^1.4.1",
     "metalsmith-markdown": "^0.2.1",
-    "metalsmith-permalinks": "^0.5.0"
+    "metalsmith-permalinks": "^0.5.0",
+    "toast-grid": "^0.2.0"
   },
   "devDependencies": {
     "metalsmith-collections": "^0.7.0",
