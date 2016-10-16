@@ -14,8 +14,15 @@ layout: post.html
   <source src="../../assets/media/patient_education/teaser.ogv" type="video/ogg">
 </video>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan varius dui. Vestibulum ut porttitor nulla.
+Patient education is hard. Plastic eyeballs as a teaching tool is a thing of the past. Modern media and technology can help solve this problem.
 
-Quisque at mi eros. Curabitur tempor massa mi, at luctus neque sagittis nec. Nullam suscipit malesuada eros at accumsan.
+Formerly known as **Eyemaginations**, the company **Rendia** offers high quality animations to _doctors_ to communicate complex medical topics to their _patients and their families_.
 
-Sed in justo sed ante aliquam mattis. Donec scelerisque neque sed augue sodales vestibulum. Curabitur sagittis ligula eget ex vestibulum imperdiet. Nunc orci nisi, dictum et congue sit amet, pulvinar et elit. Maecenas pellentesque non dui non lacinia. Quisque pretium nisi in velit placerat maximus. Ut rutrum feugiat interdum.
+![App Design](../../assets/media/patient_education/design.jpg)
+
+Doctors can build playlists of content, upload their own images/videos, and then share their creations with patients via email and by embedding them directly on their practice website. Or they can play this content right in their practice while taking advantage of onscreen drawing features with a mouse or touch device. The media player offers content protection, and patients may choose between multiple languages, closed captions, fullscreen, and more.
+
+<var data-presentation="5276fa67-49cb-48f8-40da-45b94cd34364"></var>
+<script type="text/javascript" src="//rendia.com/whitelabel/embed_js"></script>
+
+###### CODEIGNITER, CSS3, EMBER.JS, FOUNDATION, GIT, HTML5, ICON FONTS, JAVASCRIPT, JQUERY, PHP, SASS, VIDEO

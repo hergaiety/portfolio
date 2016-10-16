@@ -2,14 +2,19 @@
 title: Animated Awards
 type: article
 order: 302
-preview: navigating_employee_benefits/preview.jpg
+preview: animated_awards/preview.gif
 description: Putting some pep into company values through animation.
 client: Laureate University
 layout: post.html
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan varius dui. Vestibulum ut porttitor nulla.
+<video controls>
+  <source src="../../assets/media/animated_awards/laureate.mp4" type="video/mp4">
+  <source src="../../assets/media/animated_awards/laureate.webm" type="video/webm">
+</video>
 
-Quisque at mi eros. Curabitur tempor massa mi, at luctus neque sagittis nec. Nullam suscipit malesuada eros at accumsan.
+Laureate International Universities, a leader in private higher education, conducted its global leadership conference, including a celebration of the achievement of students who were finalists in a worldwide business school competition.
 
-Sed in justo sed ante aliquam mattis. Donec scelerisque neque sed augue sodales vestibulum. Curabitur sagittis ligula eget ex vestibulum imperdiet. Nunc orci nisi, dictum et congue sit amet, pulvinar et elit. Maecenas pellentesque non dui non lacinia. Quisque pretium nisi in velit placerat maximus. Ut rutrum feugiat interdum.
+An understanding of the event, the award criteria, the students and their process was essential in being able to clearly communicate the context and excitement the winners deserved through kinetic typographic introductions.
+
+###### After Effects

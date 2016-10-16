@@ -8,8 +8,8 @@ client: Johns Hopkins
 layout: post.html
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan varius dui. Vestibulum ut porttitor nulla.
+![Benefits Analysis Tool](../../assets/media/navigating_employee_benefits/preview.jpg)
 
-Quisque at mi eros. Curabitur tempor massa mi, at luctus neque sagittis nec. Nullam suscipit malesuada eros at accumsan.
+Johns Hopkins Health System introduced major changes to employee health benefits; changes that would require thousands of employees to manage their benefits differently and pay more.
 
-Sed in justo sed ante aliquam mattis. Donec scelerisque neque sed augue sodales vestibulum. Curabitur sagittis ligula eget ex vestibulum imperdiet. Nunc orci nisi, dictum et congue sit amet, pulvinar et elit. Maecenas pellentesque non dui non lacinia. Quisque pretium nisi in velit placerat maximus. Ut rutrum feugiat interdum.
+The solution was a benefits analysis tool which reduced the overload of information into a relevant user experience enabling a better understanding of complex health insurance concepts, resulting in broader acceptance of negative change.

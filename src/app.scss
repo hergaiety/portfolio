@@ -129,6 +129,11 @@ video {
     margin: 1em auto;
     display: block;
   }
+
+  h6 {
+    text-align: center;
+    color: $light;
+  }
 }
 
 #home > * {
