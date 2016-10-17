@@ -1,7 +1,7 @@
 ---
 title: Navigating Employee Benefits
 type: article
-order: 303
+order: 401
 preview: navigating_employee_benefits/preview.jpg
 description: Understanding your benefits package doesn't need to be hard.
 client: Johns Hopkins
