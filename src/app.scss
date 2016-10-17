@@ -31,6 +31,11 @@ body {
   background: #F2F2F2 url(../../assets/site/bg.png);
   font-family: Rokkitt, serif;
   font-size: 20px;
+
+  &.intro-undecided,
+  &:not(.intro-play) #intro-blink {
+    visibility: hidden;
+  }
 }
 
 .container {
@@ -283,4 +288,102 @@ video {
 [data-type=article] .preview img {
   width: 100%;
   height: 9rem;
+}
+
+/**
+ * Intro
+ */
+.intro-play {
+  > header {
+    animation: introSlideUp 1s 5s backwards;
+    -webkit-animation: introSlideUp 1s 5s backwards;
+  }
+
+  #intro-blink {
+    animation: introBlink 1s steps(5, start) 3 forwards;
+    -webkit-animation: introBlink 1s steps(5, start) 3 forwards;
+  }
+
+  [id*='intro-cmd-'],
+  [id*='intro-response-'] {
+    visibility: hidden;
+    animation: introAppear 250ms 3s forwards;
+    -webkit-animation: introAppear 250ms 3s forwards;
+  }
+
+  #intro-cmd-2 {
+    animation-delay: 3.1s;
+  }
+  #intro-cmd-2 {
+    animation-delay: 3.2s;
+  }
+  #intro-cmd-3 {
+    animation-delay: 3.3s;
+  }
+  #intro-cmd-4 {
+    animation-delay: 3.4s;
+  }
+  #intro-cmd-5 {
+    animation-delay: 3.5s;
+  }
+  #intro-cmd-6 {
+    animation-delay: 3.6s;
+  }
+  #intro-cmd-7 {
+    animation-delay: 3.7s;
+  }
+  #intro-cmd-8 {
+    animation-delay: 3.8s;
+  }
+  #intro-cmd-9 {
+    animation-delay: 3.9s;
+  }
+  #intro-cmd-10 {
+    animation-delay: 4s;
+  }
+  #intro-response-1 {
+    animation-delay: 4.2s;
+  }
+  #intro-response-2 {
+    animation-delay: 4.5s;
+  }
+}
+
+@keyframes introSlideUp {
+  from {
+    padding-bottom: 100vh;
+  }
+  to {
+    padding-bottom: $spacing-md;
+  }
+}
+@-webkit-keyframes introSlideUp {
+  from {
+    padding-bottom: 100vh;
+  }
+  to {
+    padding-bottom: $spacing-md;
+  }
+}
+
+@keyframes introBlink {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes introBlink {
+  to {
+    visibility: hidden;
+  }
+}
+
+@keyframes introAppear {
+  to {
+    visibility: visible;
+  }
+}
+@-webkit-keyframes introAppear {
+  to {
+    visibility: visible;
+  }
 }
