@@ -16,7 +16,7 @@ layout: post.html
 
 Patient education is hard. Plastic eyeballs as a teaching tool is a thing of the past. Modern media and technology can help solve this problem.
 
-Formerly known as **Eyemaginations**, the company **Rendia** offers high quality animations to _doctors_ to communicate complex medical topics to their _patients and their families_.
+Formerly known as **Eyemaginations**, the company **[Rendia](https://rendia.com/)** offers high quality animations to _doctors_ to communicate complex medical topics to their _patients and their families_.
 
 ![App Design](../../assets/media/patient_education/design.jpg)
 
