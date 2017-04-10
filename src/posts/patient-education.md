@@ -20,5 +20,5 @@ Doctors can build playlists of content, upload their own images/videos, and then
 
 ###### CODEIGNITER, CSS3, EMBER.JS, FOUNDATION, GIT, HTML5, ICON FONTS, JAVASCRIPT, JQUERY, PHP, SASS, VIDEO
 
-<var data-presentation="5276fa67-49cb-48f8-40da-45b94cd34364" style="width:100%; padding-bottom:56.25%; display:block;"></var>
-<script type="text/javascript" src="//rendia.com/whitelabel/embed_js"></script>
+[![Media
+Player](../../assets/media/patient_education/mediaplayer.png)](https://share.rendia.com/theater/5276fa67-49cb-48f8-40da-45b94cd34364)
