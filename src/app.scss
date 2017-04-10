@@ -211,7 +211,6 @@ video {
     }
 
     img {
-      object-fit: cover;
       border-radius: 0;
       opacity: .2;
       display: block;
@@ -220,6 +219,8 @@ video {
     .preview {
       position: relative;
       display: inline-block;
+      background-size: cover;
+      background-position: center center;
 
       h3 {
         color: white;
@@ -237,6 +238,7 @@ video {
         bottom: 0;
         left: 0;
         background: $dark;
+        opacity: .75;
       }
     }
 
@@ -263,19 +265,13 @@ video {
 }
 
 [data-type=bundle] {
-  @media (min-width: $qry-s) {
-    width: 98.5%;
-  }
-
   figure {
     width: 100%;
 
     .preview {
       float: left;
-    }
-
-    .preview img {
       height: 2.5em;
+      width: 83%;
     }
   }
 
@@ -283,9 +279,19 @@ video {
     float: right;
     padding-top: 0;
   }
+
+  @media (min-width: $qry-s) {
+    width: 98.5%;
+  }
+
+  @media (max-width: $qry-m) {
+    figure .preview {
+      width: 100%;
+    }
+  }
 }
 
-[data-type=article] .preview img {
+[data-type=article] .preview {
   width: 100%;
   height: 9rem;
 }
