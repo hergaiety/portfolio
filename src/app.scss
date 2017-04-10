@@ -38,6 +38,12 @@ body {
   }
 }
 
+#logo {
+  margin-top: 2rem;
+  width: 14rem;
+  float: right;
+}
+
 .container {
   padding: 0 $spacing-md;
   max-width: $max-width;
@@ -58,7 +64,7 @@ h1 + h2 {
 }
 
 @media (max-width: $qry-m) {
-  #face {
+  #logo {
     display: none;
   }
 
