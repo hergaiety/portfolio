@@ -3,7 +3,7 @@ title: Better Banking Platform
 type: article
 order: 201
 preview: better_banking_platform/preview.jpg
-description: Empowered people and strengthening communities with better financial tools.
+description: Strengthening communities with better financial tools.
 client: Q2
 layout: post.html
 ---
