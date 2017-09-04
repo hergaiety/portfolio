@@ -38,6 +38,10 @@ body {
   }
 }
 
+a {
+  cursor: pointer;
+}
+
 #logo {
   margin-top: 2rem;
   width: 14rem;
@@ -189,6 +193,30 @@ video {
 
 #home > * {
   padding-top: 0;
+}
+
+#morebio {
+  visibility: hidden;
+}
+
+#bio {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 1s;
+
+  .secondary {
+    color: $secondary-dark;
+  }
+
+  img {
+    width: auto;
+    float: left;
+    padding-right: .5em;
+  }
+}
+
+#morebio:checked + #bio {
+  max-height: 10em;
 }
 
 .posts {
