@@ -3,8 +3,7 @@
   "private": true,
   "scripts": {
     "build": "npm run vendor && make build",
-    "vendor": "mkdir -p build && cp ./node_modules/toast-grid/css/grid.css ./build",
-    "deploy": "aws s3 sync ./build s3://www.joewroten.com"
+    "vendor": "mkdir -p build && cp ./node_modules/toast-grid/css/grid.css ./build"
   },
   "dependencies": {
     "handlebars": "^4.0.5",
