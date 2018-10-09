@@ -10,7 +10,17 @@ layout: post.html
 
 There's more than one way to volunteer in today's world. Offering one's skills as a web designer and developer is a great way to give back while tackling unique challenges.
 
-![Team](../../assets/media/working_with_nonprofits/team.jpg)
+## Code2College
+
+### Preparing the Next Generation for Success
+
+Homegrown tech talent is what Code2College is all about. Eager students from underrepresented groups are ready to learn STEM field topics and Code2College reaches out to those in the industry to help them get there.
+
+![Team Photo](../../assets/media/working_with_nonprofits/code2college.jpg)
+
+Meeting with these excited young minds for interview preparation really changed the way I connect with potential hires.
+
+Recently they've opened their cirriculum planning to outside collaboration. It's been an exciting challenge to carefully consider the best ways to teach the fundamentals of web development from "What is HTML?" to "I can build my own web app!".
 
 ## The SEED
 
@@ -18,7 +28,9 @@ There's more than one way to volunteer in today's world. Offering one's skills a
 
 Through analytics it was apparent very few could find out how to sign up for classes on learning English - an all English website and the page being burried through subnavs was the likely culprit. We user tested some updated designs where a non-native speaker could jump right to a Spanish page on how to sign up for classes first.
 
-We then **improved Spanish support** for the rest of the website to support all the user personas we had discovered: _The Student, The Donor, and The Volunteer_. Next up was improving ways people can get involved either through their time or their dollar through a better workflow and cleaned up content.
+![Team](../../assets/media/working_with_nonprofits/team.jpg)
+
+We then **improved internationalization** for the rest of the website to support all the user personas we had discovered: _The Student, The Donor, and The Volunteer_. Next up was improving ways people can get involved either through their time or their dollar through a better workflow and cleaned up content.
 
 ![Wireframes](../../assets/media/working_with_nonprofits/wireframes.png)
 
