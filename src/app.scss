@@ -155,24 +155,10 @@ video {
 
   p {
     margin-bottom: 1em;
+    max-width: 300em;
   }
 
   @media (min-width: $qry-s) {
-    p {
-      width: 50%;
-      clear: both;
-
-      &:nth-of-type(odd) {
-        float: left;
-      }
-
-      &:nth-of-type(odd) {
-        float: right;
-      }
-    }
-  }
-
-  @media (min-width: $qry-s) and (max-width: $qry-m) {
     p {
       width: 75%;
     }
