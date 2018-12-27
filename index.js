@@ -1,3 +1,4 @@
+const marked = require('marked');
 const { compile } = require('handlebars');
 const requestGithub = require('./src/request');
 const { join } = require('path');
@@ -8,6 +9,9 @@ const dist = './dist';
 const exampleHBS = compile(`
   <h1>{{name}}</h1>
   <hr />
+  <main>
+    {{{readme.html}}}
+  </main>
 `);
 
 (async () => {
@@ -45,7 +49,14 @@ const exampleHBS = compile(`
 
   let combinedJSONs = filesJSON.concat(pinnedRepoData);
 
-  let writeFilesPromises = combinedJSONs.map(json => {
+  let renderReadmes = combinedJSONs.map(json => {
+    if (json.readme && json.readme.text) {
+      json.readme.html = marked(json.readme.text);
+    }
+    return json;
+  });
+
+  let writeFilesPromises = renderReadmes.map(json => {
     let fileName = json.name.replace(/[^a-zA-Z\d:]/g, '').toLowerCase();
     return outputFile(join(dist, fileName) + '.html', exampleHBS(json));
   });
