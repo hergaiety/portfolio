@@ -1,68 +1,26 @@
-const marked = require('marked');
-const { compile } = require('handlebars');
-const requestGithub = require('./src/request');
 const { join } = require('path');
-const { readdir, readJson, outputFile } = require('fs-extra');
+const { outputFile } = require('fs-extra');
+const marked = require('marked');
+const getTemplate = require('./src/template');
+const { getPinnedRepoJSONs, getStaticPageJSONs } = require('./src/discoverJSONData');
 
-const pagesPath = './src/pages';
-const dist = './dist';
-const exampleHBS = compile(`
-  <h1>{{name}}</h1>
-  <hr />
-  <main>
-    {{{readme.html}}}
-  </main>
-`);
+const distPath = './dist';
 
 (async () => {
-  let fileNames;
-  let filesJSON;
-  let {
-    data: {
-      viewer: {
-        pinnedRepositories: {
-          edges: pinnedRepoData
-        }
-      }
-    }
-  } = await requestGithub(require('./src/schema'));
-  pinnedRepoData = pinnedRepoData.map(data => data.node);
-
-  try {
-    fileNames = await readdir(pagesPath);
-  } catch (error) {
-    console.error(error);
-    return;
-  }
-
-  let readFilesPromises = fileNames.map(fileName => {
-    let filePath = join(pagesPath, fileName);
-    return readJson(filePath);
-  });
-
-  try {
-    filesJSON = await Promise.all(readFilesPromises);
-  } catch (error) {
-    console.error('Error while reading JSON', error);
-    return;
-  }
-
-  let combinedJSONs = filesJSON.concat(pinnedRepoData);
-
-  let renderReadmes = combinedJSONs.map(json => {
+  const interiorTemplate = await getTemplate('interior');
+  let repoJSONs = await getPinnedRepoJSONs();
+  let staticJSONs = await getStaticPageJSONs();
+  let combinedJSONs = repoJSONs.concat(staticJSONs);
+  const saveAsInteriorHTML = async json => {
+    let fileName = json.name.replace(/[^a-zA-Z\d:]/g, '').toLowerCase();
     if (json.readme && json.readme.text) {
       json.readme.html = marked(json.readme.text);
     }
-    return json;
-  });
-
-  let writeFilesPromises = renderReadmes.map(json => {
-    let fileName = json.name.replace(/[^a-zA-Z\d:]/g, '').toLowerCase();
-    return outputFile(join(dist, fileName) + '.html', exampleHBS(json));
-  });
+    return outputFile(join(distPath, fileName) + '.html', interiorTemplate(json));
+  }
 
   try {
-    await Promise.all(writeFilesPromises);
+    await Promise.all(combinedJSONs.map(saveAsInteriorHTML));
   } catch (error) {
     console.error('Error while writing html files', error);
     return;
