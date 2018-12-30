@@ -4,7 +4,8 @@
   <title>Wroten - {{name}}</title>
 
   <link href="./assets/stylesheet.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Slabo+27px" rel="stylesheet"> 
+  <link href="./assets/highlightjs-dracula.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Slabo+27px|Source+Code+Pro|Source+Sans+Pro:300" rel="stylesheet"> 
 
   <meta charset="UTF-8">
   <meta name="author" content="Joe Wroten">
@@ -17,10 +18,15 @@
     <div class="interior-topbar -pad-h -pad-v">
       ...
     </div>
-    <h1 class="interior-headline -pad-h -pad-v">{{name}}</h1>
+    <div class="interior-headline -pad-h -pad-v">
+      <h1 class="-container">{{name}}</h1>
+    </div>
   </header>
-  <main class="interior-content -pad-h -pad-v">
+  <main class="interior-content -container -pad-h -pad-v">
     {{{readme.html}}}
   </main>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>
