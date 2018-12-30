@@ -23,7 +23,28 @@
     </div>
   </header>
   <main class="interior-content -container -pad-h -pad-v">
-    {{{readme.html}}}
+    <article>
+      <header class="-clearfix">
+        <h2 class="interior-description">
+          {{description}}
+        </h2>
+        <span class="-right">
+          <a href={{url}}>
+            {{#if organization}}
+              {{organization}}
+            {{else}}
+              Github Repo
+            {{/if}}
+          </a>
+        </span>
+        <ul class="-left interior-tags">
+          {{#each repositoryTopics.edges}}
+            <li><a href="#" class="tag">{{this.node.topic.name}}</a>
+          {{/each}}
+        </ul>
+      </header>
+      {{{readme.html}}}
+    </article>
   </main>
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>

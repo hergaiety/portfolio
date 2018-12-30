@@ -3,6 +3,7 @@ html, body {
   margin: 0;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 15pt;
+  color: #6C7A81;
 }
 
 code {
@@ -17,6 +18,10 @@ h1 {
   font-size: 35pt;
 }
 
+a {
+  color: #15202C;
+}
+
 .-pad-h {
   padding-left: 20px;
   padding-right: 20px;
@@ -27,9 +32,33 @@ h1 {
   padding-bottom: 20px;
 }
 
+.-left {
+  float: left;
+}
+
+.-right {
+  float: right;
+}
+
+.-clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .-container {
   max-width: 40rem;
   margin: 0 auto;
+}
+
+.tag {
+  padding: 0 .3em;
+  border-radius: 3px;
+  margin-right: .5em;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, .1);
+  color: #1A323E;
+  background: #F3EDFF;
+  text-decoration: none;
 }
 
 .interior-header {
@@ -50,20 +79,34 @@ h1 {
   margin: 0 auto;
 }
 
-.interior-content h1:first-child {
+.interior-content .interior-description {
+  margin-top: 0;
+  margin-bottom: .25em;
+  color: black;
+  font-size: 25pt;
+}
+
+.interior-content h1:first-of-type {
   display: none;
   speak: none;
 }
 
-.interior-content p:first-of-type {
-  margin-top: 0;
-}
-
 .interior-content pre code {
+  font-size: 13pt;
   border-radius: 3px;
   max-width: 100%;
   max-height: 6em;
   display: block;
   overflow: auto;
+}
+
+.interior-tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.interior-tags li {
+  display: inline-block;
 }
 

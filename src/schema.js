@@ -4,10 +4,9 @@ module.exports = `{
       edges {
         node {
           name
-          updatedAt
           description
           url
-          repositoryTopics(last: 12) {
+          repositoryTopics(last: 5) {
             edges {
               node {
                 topic {
