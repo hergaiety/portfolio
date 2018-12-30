@@ -1,8 +1,9 @@
 {
   "name": "joe-wroten-portfolio",
-  "private": true,
-  "scripts": {},
-  "dependencies": {},
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
   "devDependencies": {
     "axios": "^0.18.0",
     "fs-extra": "^7.0.1",
