@@ -91,6 +91,13 @@ a {
   speak: none;
 }
 
+.interior-content p > img {
+  max-height: 300px;
+  max-width: calc(100% + 40px);
+  position: relative;
+  left: -20px;
+}
+
 .interior-content pre code {
   font-size: 13pt;
   border-radius: 3px;
