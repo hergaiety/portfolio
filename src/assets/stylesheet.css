@@ -1,0 +1,54 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Slabo 27px', serif;
+}
+
+h1 {
+  font-size: 35pt;
+}
+
+.-pad-h {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.-pad-v {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.interior-header {
+  background: #15202C;
+}
+
+.interior-topbar {
+  height: 25px;
+}
+
+.interior-headline {
+  line-height: 1em;
+  margin: 0;
+  background: linear-gradient(90deg, rgba(235, 181, 242, .3), rgba(128, 95, 132, .3));
+  color: white;
+}
+
+.interior-content h1:first-child {
+  display: none;
+  speak: none;
+}
+
+.interior-content p:first-of-type {
+  margin-top: 0;
+}
+
+.interior-content code {
+  max-width: 100%;
+  display: block;
+  overflow: auto;
+}
+

@@ -2,6 +2,10 @@
 <html>
 <head>
   <title>Wroten - {{name}}</title>
+
+  <link href="./assets/stylesheet.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Slabo+27px" rel="stylesheet"> 
+
   <meta charset="UTF-8">
   <meta name="author" content="Joe Wroten">
   <meta name="description" content="Web engineer realizing the best tools to communicate valuable information to the people who need it.">
@@ -9,9 +13,13 @@
   <meta name="viewport" content="width=device-width; height=device-height; maximum-scale=1.4; initial-scale=1.0; user-scalable=yes">
 </head>
 <body>
-  <h1>{{name}}</h1>
-  <hr />
-  <main>
+  <header class="interior-header">
+    <div class="interior-topbar -pad-h -pad-v">
+      ...
+    </div>
+    <h1 class="interior-headline -pad-h -pad-v">{{name}}</h1>
+  </header>
+  <main class="interior-content -pad-h -pad-v">
     {{{readme.html}}}
   </main>
 </body>
