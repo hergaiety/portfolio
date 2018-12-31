@@ -5,7 +5,11 @@ const getTemplate = require('./template');
 
 const distPath = './dist';
 
-const generateStaticPages = async jsonData => {
+const generateIndexPage = async jsonData => {
+  console.log('Index page...TODO');
+};
+
+const generateInteriorPages = async jsonData => {
   const interiorTemplate = await getTemplate('interior');
   const saveAsInteriorHTML = async json => {
     let fileName = json.name.replace(/[^a-zA-Z\d:]/g, '').toLowerCase();
@@ -24,5 +28,6 @@ const generateStaticPages = async jsonData => {
 };
 
 module.exports = {
-  generateStaticPages,
+  generateInteriorPages,
+  generateIndexPage,
 };
