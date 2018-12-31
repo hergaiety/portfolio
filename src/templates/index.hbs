@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wroten - Portfolio</title>
+
+  <link href="./assets/stylesheet.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Slabo+27px|Source+Code+Pro|Source+Sans+Pro:300" rel="stylesheet"> 
+
+  <meta charset="UTF-8">
+  <meta name="author" content="Joe Wroten">
+  <meta name="description" content="Web engineer realizing the best tools to communicate valuable information to the people who need it.">
+  <meta name="keywords" content="developer,designer,engineer,web,portfolio">
+  <meta name="viewport" content="width=device-width; height=device-height; maximum-scale=1.4; initial-scale=1.0; user-scalable=yes">
+</head>
+<body>
+  <ol>
+    {{#each this}}
+      <li><a href="./{{this.name}}.html">{{this.name}}</a>
+    {{/each}}
+  </ol>
+</body>
+</html>

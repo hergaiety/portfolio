@@ -1,3 +1,6 @@
 {
-  "name": "Example"
+  "name": "Example",
+  "readme": {
+    "text": "## Whats Up?"
+  }
 }
