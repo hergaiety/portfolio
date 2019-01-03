@@ -6,6 +6,13 @@ html, body {
   color: #6C7A81;
 }
 
+svg {
+  fill: white;
+  max-width: 100%;
+  max-height: 100%;
+  height: 1em;
+}
+
 code {
   font-family: 'Source Code Pro', monospace;
 }
@@ -69,9 +76,20 @@ a {
   height: 25px;
 }
 
+.interior-topbar svg {
+  height: 2rem;
+  max-height: none;
+  position: relative;
+  top: -.5rem;
+}
+
 .interior-headline {
   background: linear-gradient(90deg, rgba(235, 181, 242, .3), rgba(128, 95, 132, .3));
   color: white;
+}
+
+.interior-headline svg {
+  vertical-align: bottom;
 }
 
 .interior-headline h1 {

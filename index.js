@@ -2,6 +2,7 @@ const chalk = require('chalk');
 const { getPinnedRepoJSONs, getStaticPageJSONs } = require('./src/discoverJSONData');
 const { generateIndexPage, generateInteriorPages } = require('./src/generateHTMLPages');
 const copyStaticAssets = require('./src/copyStaticAssets');
+const generateSpritesheet = require('./src/generateSpritesheet');
 
 (async () => {
   console.log(chalk.blue('● Fetching Pinned Repo Data...'));
@@ -22,5 +23,11 @@ const copyStaticAssets = require('./src/copyStaticAssets');
   console.log(chalk.blue('● Copying static assets...'));
   await copyStaticAssets();
   console.log(chalk.green('✓ Copied static assets'));
+})();
+
+(async () => {
+  console.log(chalk.blue('● Generating spritesheet...'));
+  await generateSpritesheet();
+  console.log(chalk.green('✓ Generated spritesheet'));
 })();
 
