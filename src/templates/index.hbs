@@ -12,10 +12,20 @@
   <meta name="keywords" content="developer,designer,engineer,web,portfolio">
   <meta name="viewport" content="width=device-width; height=device-height; maximum-scale=1.4; initial-scale=1.0; user-scalable=yes">
 </head>
-<body>
-  <ol>
+<body class="index">
+  <ol class="index-interiorlinks">
     {{#each this}}
-      <li><a href="./{{this.name}}.html">{{this.name}}</a>
+      <li class="index-interiorlink-wrapper">
+        <a class="index-interiorlink -volunteer" href="./{{this.name}}.html">
+          <h3>{{this.name}}</h3>
+          <p>{{this.description}}</p>
+          <ul class="tags">
+            {{#each this.repositoryTopics.edges}}
+              <li class="tag">{{this.node.topic.name}}
+            {{/each}}
+          </ul>
+        </a>
+      </li>
     {{/each}}
   </ol>
 </body>
