@@ -66,6 +66,11 @@ a {
   color: #1A323E;
   background: #F3EDFF;
   text-decoration: none;
+  display: inline-block;
+}
+
+.index .tag {
+  margin-bottom: 1rem;
 }
 
 .index,
@@ -152,7 +157,8 @@ a {
   padding: 0;
 }
 
-.tags li {
-  display: inline-block;
+.index .tags {
+  height: 1.6em;
+  overflow: hidden;
 }
 
