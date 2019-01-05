@@ -17,6 +17,7 @@ const getPinnedRepoJSONs = async () => {
     }
   } = await requestGithub(schema);
   return pinnedRepoData.map(data => {
+    data.node.pageType = 'git';
     if (data.node.readme && data.node.readme.text) {
       data.node.readme.html = marked(data.node.readme.text);
     }

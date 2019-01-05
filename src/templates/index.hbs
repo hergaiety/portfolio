@@ -16,9 +16,14 @@
   <ol class="index-interiorlinks">
     {{#each this}}
       <li class="index-interiorlink-wrapper">
-        <a class="index-interiorlink -volunteer" href="./{{this.name}}.html">
-          <h3>{{this.name}}</h3>
-          <p>{{this.description}}</p>
+        <a class="index-interiorlink -{{this.pageType}}" href="./{{this.name}}.html">
+          <h3 class="-mar-no">
+            <svg class="index-interiorlink-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <use xlink:href="./assets/spritesheet.svg#git" />
+            </svg>
+            {{this.name}}
+          </h3>
+          <p class="index-interiorlink-description -mar-no">{{this.description}}</p>
           <ul class="tags">
             {{#each this.repositoryTopics.edges}}
               <li class="tag">{{this.node.topic.name}}
