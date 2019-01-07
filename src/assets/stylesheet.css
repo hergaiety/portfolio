@@ -65,12 +65,20 @@ a {
 .tag {
   padding: 0 .3em;
   border-radius: 3px;
+  margin-bottom: .25em;
   margin-right: .5em;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, .1);
   color: #1A323E;
-  background: #F3EDFF;
   text-decoration: none;
   display: inline-block;
+}
+
+.-volunteer .tag {
+  background: #F3EDFF;
+}
+
+.-git .tag {
+  background: #F0FFED;
 }
 
 .index .tag {
@@ -81,6 +89,14 @@ a {
 .interior-header {
   background: #15202C;
   color: white;
+}
+
+.interior-info {
+  display: flex;
+}
+
+.interior-link {
+  white-space: nowrap;
 }
 
 .index-interiorlinks {

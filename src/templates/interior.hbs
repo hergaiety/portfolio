@@ -13,7 +13,7 @@
   <meta name="keywords" content="developer,designer,engineer,web,portfolio">
   <meta name="viewport" content="width=device-width; height=device-height; maximum-scale=1.4; initial-scale=1.0; user-scalable=yes">
 </head>
-<body>
+<body class="interior -{{pageType}}">
   <header class="interior-header">
     <div class="interior-topbar -pad-h -pad-v">
       <a href="/">
@@ -37,20 +37,22 @@
         <h2 class="interior-description">
           {{description}}
         </h2>
-        <span class="-right">
-          <a href={{url}}>
-            {{#if organization}}
-              {{organization}}
-            {{else}}
-              Github Repo
-            {{/if}}
-          </a>
-        </span>
-        <ul class="-left tags">
-          {{#each repositoryTopics.edges}}
-            <li><a href="#" class="tag">{{this.node.topic.name}}</a>
-          {{/each}}
-        </ul>
+        <div class="interior-info">
+          <ul class="tags interior-tags">
+            {{#each repositoryTopics.edges}}
+              <li class="-left"><a href="#" class="tag">{{this.node.topic.name}}</a>
+            {{/each}}
+          </ul>
+          <div class="interior-link">
+            <a href={{url}}>
+              {{#if organization}}
+                {{organization}}
+              {{else}}
+                Github Repo
+              {{/if}}
+            </a>
+          </div>
+        </div>
       </header>
       {{{readme.html}}}
     </article>
