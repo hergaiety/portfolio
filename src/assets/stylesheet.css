@@ -81,6 +81,14 @@ a {
   background: #F0FFED;
 }
 
+.index-menulink {
+  color: white;
+}
+
+.index-menulink svg {
+  height: 1.5em;
+}
+
 .index-top {
   color: #5B7189;
   margin-bottom: 2.5rem;
@@ -103,6 +111,7 @@ a {
 .index .intro {
   font-size: 59px;
   line-height: 45px;
+  margin-top: 0;
   margin-bottom: 5px;
   text-transform: uppercase;
 }
