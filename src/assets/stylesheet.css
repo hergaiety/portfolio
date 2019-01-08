@@ -161,6 +161,7 @@ a {
 }
 
 .interior-topbar svg {
+  color: white;
   height: 2rem;
   max-height: none;
   position: relative;
