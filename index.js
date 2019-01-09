@@ -1,6 +1,6 @@
 const chalk = require('chalk');
 const { getPinnedRepoJSONs, getStaticPageJSONs } = require('./src/discoverJSONData');
-const { generateIndexPage, generateInteriorPages } = require('./src/generateHTMLPages');
+const { initialize: initializePages, generateIndexPage, generateInteriorPages } = require('./src/generateHTMLPages');
 const copyStaticAssets = require('./src/copyStaticAssets');
 const generateSpritesheet = require('./src/generateSpritesheet');
 
@@ -9,6 +9,10 @@ const generateSpritesheet = require('./src/generateSpritesheet');
   let repoJSONs = await getPinnedRepoJSONs();
   console.log(chalk.blue('● Fetching Static Page Data...'));
   let staticJSONs = await getStaticPageJSONs();
+
+  console.log(chalk.blue('● Initializing page generator...'));
+  await initializePages();
+  console.log(chalk.green('✓ Initialized page partials'));
 
   console.log(chalk.blue('● Generating index html page...'));
   await generateIndexPage(repoJSONs.concat(staticJSONs));

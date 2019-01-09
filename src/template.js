@@ -1,7 +1,24 @@
-const { compile } = require('handlebars');
-const { readFile } = require('fs-extra');
+const Handlebars = require('handlebars');
+const { readFile, readdir } = require('fs-extra');
+const { join, basename } = require('path');
 
-module.exports = async filename => {
+const registerPartials = async () => {
+  try {
+    let results = await readdir('./src/templates/partials')
+    results.forEach(async filename => {
+      let filePath = join('./src/templates/partials', filename);
+      let partialName = basename(filename, '.hbs');
+      let partialContents = await readFile(filePath);
+      partialContents = partialContents.toString();
+      Handlebars.registerPartial(partialName, partialContents);
+    });
+  } catch(error) {
+    console.error('Could not read partials in ./src/templates/partials/', error);
+    return;
+  }
+}
+
+const getTemplate = async filename => {
   let template;
   try {
     template = await readFile(`./src/templates/${filename}.hbs`);
@@ -10,6 +27,11 @@ module.exports = async filename => {
     console.error('Could not fetch template', filename, error);
     return;
   }
-  return compile(template);
+  return Handlebars.compile(template);
+};
+
+module.exports = {
+  registerPartials,
+  getTemplate,
 };
 

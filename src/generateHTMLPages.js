@@ -1,8 +1,12 @@
 const { join } = require('path');
 const { outputFile } = require('fs-extra');
-const getTemplate = require('./template');
+const { getTemplate, registerPartials } = require('./template');
 
 const distPath = './dist';
+
+const initialize = async () => {
+  return registerPartials();
+}
 
 const generateIndexPage = async jsonData => {
   const indexTemplate = await getTemplate('index');
@@ -30,6 +34,8 @@ const generateInteriorPages = async jsonData => {
 };
 
 module.exports = {
+  initialize,
   generateInteriorPages,
   generateIndexPage,
 };
+
