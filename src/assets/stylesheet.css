@@ -58,8 +58,26 @@ a {
 }
 
 .-container {
+  position: relative;
   max-width: 40rem;
   margin: 0 auto;
+}
+
+.about-link {
+  transition: top .15s ease-out;
+  position: absolute;
+  top: -5px;
+  right: 20px;
+}
+
+.about-link:hover,
+.about-link:focus {
+  top: 0;
+}
+
+.about-link-image {
+  height: 60px;
+  border-radius: 0  0 50% 50%;
 }
 
 .tag {
