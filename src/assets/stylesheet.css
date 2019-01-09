@@ -119,6 +119,7 @@ a {
 .index-top em {
   color: #B8CCE3;
   font-style: normal;
+  text-decoration: none;
 }
 
 .index .name {
@@ -251,5 +252,15 @@ a {
 .index .tags {
   height: 1.6em;
   overflow: hidden;
+}
+
+.footer {
+  font-size: 75%;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.footer a {
+  color: inherit;
 }
 
