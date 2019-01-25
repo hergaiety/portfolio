@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Slabo+27px|Source+Code+Pro|Source+Sans+Pro:300" rel="stylesheet"> 
 
   <meta charset="UTF-8">
-  <meta name="author" content="Joe Wroten">
+  <meta name="author" content="Jo Wroten">
   <meta name="description" content="Web engineer realizing the best tools to communicate valuable information to the people who need it.">
   <meta name="keywords" content="developer,designer,engineer,web,portfolio">
   <meta name="viewport" content="width=device-width; height=device-height; maximum-scale=1.4; initial-scale=1.0; user-scalable=yes">
@@ -21,8 +21,8 @@
             <use xlink:href="./assets/spritesheet.svg#back" />
         </svg>
       </a>
-      <a href="#" class="about-link">
-        <img class="about-link-image" src="./assets/avatar-small.png" alt="About Joe Wroten" />
+      <a href="#" class="about-link" onclick="document.getElementById('about').classList.toggle('open')">
+        <img class="about-link-image" src="./assets/avatar-small.png" alt="About Jo Wroten" />
       </a>
     </div>
     <div class="interior-headline -{{pageType}} -pad-h -pad-v">
@@ -34,6 +34,9 @@
       </h1>
     </div>
   </header>
+  <div class="popup" id="about">
+    {{> about}}
+  </div>
   <main class="interior-content -container -pad-h -pad-v">
     <article>
       <header class="-clearfix">

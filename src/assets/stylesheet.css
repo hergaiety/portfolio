@@ -254,6 +254,51 @@ a {
   overflow: hidden;
 }
 
+.popup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  transform: translateX(-100vw);
+  opacity: 0;
+  transition: opacity .35s;
+}
+.popup.open {
+  transform: translateX(0);
+  opacity: 1;
+}
+#about {
+  background: linear-gradient(-20deg, rgba(251, 181, 217, 0) 50%, rgba(250, 206, 190, 1)), linear-gradient(20deg, #92E8FD, #FCBADB);
+}
+.about-close {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  color: white;
+}
+.about-image {
+  width: 185px;
+  margin: 1rem auto;
+  display: block;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0,0,0,.4);
+}
+.about-links {
+  list-style-type: none;
+  font-size: 2rem;
+  line-height: 4rem;
+}
+.about-links a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.about-links svg {
+  margin-right: 1rem;
+}
+
 .footer {
   font-size: 75%;
   margin-top: 3rem;
