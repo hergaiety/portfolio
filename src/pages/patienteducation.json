@@ -2,6 +2,8 @@
   "name": "Patient Education",
   "description": "Empowering doctors to educate through tech.",
   "updatedAt": "2015-12-30T00:00:00Z",
+  "organization": "Rendia",
+  "url": "https://get.rendia.com/",
   "pageType": "work-history",
   "repositoryTopics": {
     "edges": [

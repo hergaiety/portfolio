@@ -1,7 +1,9 @@
 {
   "name": "Austin Give Camp",
   "description": "Pro-bono web dev for good.",
-	"updatedAt": "2016-10-04",
+  "updatedAt": "2016-10-04",
+  "organization": "Austin Give Camp",
+  "url": "https://www.austingivecamp.org/",
   "pageType": "volunteer",
   "repositoryTopics": {
     "edges": [
