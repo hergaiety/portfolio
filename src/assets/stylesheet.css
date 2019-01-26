@@ -134,6 +134,11 @@ a {
   margin-bottom: 5px;
   text-transform: uppercase;
 }
+@media screen and (min-width: 550px) {
+  .index .intro {
+    margin-top: 2rem;
+  }
+}
 
 .index .tag {
   margin-bottom: 1rem;
