@@ -3,6 +3,11 @@ const { getPinnedRepoJSONs, getStaticPageJSONs } = require('./src/discoverJSONDa
 const { initialize: initializePages, generateIndexPage, generateInteriorPages } = require('./src/generateHTMLPages');
 const copyStaticAssets = require('./src/copyStaticAssets');
 const generateSpritesheet = require('./src/generateSpritesheet');
+const { existsSync, mkdirSync } = require('fs');
+
+['./dist', './dist/assets'].forEach(dir => {
+  if (!existsSync(dir)) mkdirSync(dir);
+});
 
 (async () => {
   console.log(chalk.blue('● Fetching Pinned Repo Data...'));
