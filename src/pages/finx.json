@@ -1,0 +1,19 @@
+{
+  "name": "Innovating in FinX",
+  "description": "Stronger communities w/ better financial tools.",
+  "pageType": "work-history",
+  "repositoryTopics": {
+    "edges": [
+      {
+        "node": {
+          "topic": {
+            "name": "work history"
+          }
+        }
+      }
+    ]
+  },
+  "readme": {
+    "text": "## Developer III at Q2ebanking \n [Q2](https://www.q2ebanking.com/) provides a banking platform that interfaces personal and professional banking needs into a single tool. They then offer this as a customizable software as a service to banks and credit unions big or small. Community banks who would have otherwise had to outsource or hire a team to build a platform with potential security holes and poor usability are a thing of the past. \n\n ![Mobile banking software](./assets/finx1.jpg) \n\n Built **Ember.js** & **Vue.js** powered banking software used by tens of millions worldwide. _Mentored_ new hires, reforged **automation testing** standards, improved A11y. \n\n Gave company-wide internal presentations around new initiatives, features and development strategies. Co-organized an internal developer convention. \n\n ![Desktop banking software](./assets/finx2.jpg) \n\n Lead an innovative [HTML5 Web Components project](https://wrotenwrites.com/web-components/) to achieve ambitious cross-team goals."
+  }
+}
