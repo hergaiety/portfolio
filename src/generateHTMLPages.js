@@ -9,10 +9,11 @@ const initialize = async () => {
 }
 
 const generateIndexPage = async jsonData => {
+  let sortedData = jsonData.sort((prev, cur) => new Date(prev.updatedAt) < new Date(cur.updatedAt));
   const indexTemplate = await getTemplate('index');
 
   try {
-    return outputFile(join(distPath, 'index') + '.html', indexTemplate(jsonData));
+    return outputFile(join(distPath, 'index') + '.html', indexTemplate(sortedData));
   } catch (error) {
     console.error('Error while writing index html file', error);
     return;

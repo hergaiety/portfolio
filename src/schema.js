@@ -6,6 +6,7 @@ module.exports = `{
           name
           description
           url
+          updatedAt
           repositoryTopics(last: 5) {
             edges {
               node {
