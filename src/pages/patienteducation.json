@@ -1,0 +1,19 @@
+{
+  "name": "Patient Education",
+  "description": "Empowering doctors to educate through tech.",
+  "pageType": "work-history",
+  "repositoryTopics": {
+    "edges": [
+      {
+        "node": {
+          "topic": {
+            "name": "work history"
+          }
+        }
+      }
+    ]
+  },
+  "readme": {
+    "text": "## Senior Web Engineer at Rendia \n Patient education can be difficult. Plastic eyeballs as a teaching tool is a thing of the past. Modern media and technology can help solve this problem. \n\n ![Flythrough of the human eye](./assets/patienteducation1.gif) \n\n Formerly known as Eyemaginations, the company [Rendia](https://rendia.com/) offers high quality animations to doctors to communicate complex medical topics to their patients and their families. \n\n ![App Design](./assets/patienteducation2.jpg) \n\n Launched two **Ember.js**, **HTML Video** & **Canvas** powered enterprise scale apps now educating thousands of patients nationwide. _Lead UX design_ initiatives, _tech stack decisions_ and technical _project management_. \n\n Doctors can build playlists of content, upload their own images/videos, and then share their creations with patients via email and by embedding them directly on their practice website. Or they can play this content right in their practice while taking advantage of onscreen drawing features with a mouse or touch device. [The media player](https://share.rendia.com/theater/5276fa67-49cb-48f8-40da-45b94cd34364) offers content protection, and patients may choose between multiple languages, closed captions, fullscreen, and more. \n\n [![Media Player Preview](./assets/patienteducation3.png)](https://share.rendia.com/theater/5276fa67-49cb-48f8-40da-45b94cd34364)"
+  }
+}

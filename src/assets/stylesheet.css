@@ -241,7 +241,8 @@ a {
   speak: none;
 }
 
-.interior-content p > img {
+.interior-content p > img,
+.interior-content p > a > img {
   max-height: 300px;
   max-width: calc(100% + 40px);
   position: relative;
