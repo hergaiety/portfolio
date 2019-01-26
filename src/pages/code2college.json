@@ -1,0 +1,19 @@
+{
+  "name": "Code2College",
+  "description": "Curriculum development and interview prep.",
+  "pageType": "volunteer",
+  "repositoryTopics": {
+    "edges": [
+      {
+        "node": {
+          "topic": {
+            "name": "volunteering"
+          }
+        }
+      }
+    ]
+  },
+  "readme": {
+    "text": "## Preparing the Next Generation for Success \n There's more than one way to volunteer in today's world. Offering one's skills as a web designer and developer is a great way to give back while tackling unique challenges. \n\n ![Volunteers](./assets/code2college.jpg) \n\n Homegrown tech talent is what Code2College is all about. Eager students from underrepresented groups are ready to learn STEM field topics and Code2College reaches out to those in the industry to help them get there. \n\n Meeting with these excited young minds for interview preparation really changed the way I connect with potential hires. \n\n Recently they've opened their cirriculum planning to outside collaboration. It's been an exciting challenge to carefully consider the best ways to teach the fundamentals of web development from \"What is HTML?\" to \"I can build my own web app!\"."
+  }
+}
