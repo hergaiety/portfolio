@@ -248,6 +248,16 @@ a {
   position: relative;
   left: -20px;
 }
+.interior-content p > img[src^="https://travis-ci"],
+.interior-content p > img[src^="https://play.google.com/intl/en_us/badges"],
+.interior-content p > img[src^="https://emberobserver"],
+.interior-content p > img[src^="https://badge"],
+.interior-content p > a > img[src^="https://travis-ci"],
+.interior-content p > a > img[src^="https://play.google.com/intl/en_us/badges"],
+.interior-content p > a > img[src^="https://emberobserver"],
+.interior-content p > a > img[src^="https://badge"] {
+  left: 0;
+}
 
 .interior-content pre code {
   font-size: 13pt;
