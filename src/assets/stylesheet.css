@@ -161,6 +161,9 @@ a {
 .interior-link {
   white-space: nowrap;
 }
+.interior-tags {
+  flex-grow: 1;
+}
 
 .index-interiorlinks {
   list-style-type: none;
