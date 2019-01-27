@@ -188,10 +188,7 @@ a {
 }
 
 .index-interiorlink-description {
-  height: 1.5em;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
+  margin-bottom: .25em;
 }
 
 .index-interiorlink-icon {
