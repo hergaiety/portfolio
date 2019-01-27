@@ -314,6 +314,8 @@ a {
   box-shadow: 0 5px 15px rgba(0,0,0,.4);
 }
 .about-links {
+  margin: 0 auto;
+  width: 360px;
   list-style-type: none;
   font-size: 2rem;
   line-height: 4rem;
