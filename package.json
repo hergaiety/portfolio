@@ -1,5 +1,5 @@
 {
-  "name": "joe-wroten-portfolio",
+  "name": "jo-wroten-portfolio",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
