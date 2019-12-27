@@ -8,7 +8,7 @@
     "axios": "^0.19.0",
     "chalk": "^2.4.1",
     "fs-extra": "^7.0.1",
-    "handlebars": "^4.1.2",
+    "handlebars": "^4.3.0",
     "marked": "^0.6.2",
     "svgdir2sprite": "^1.0.2"
   },
